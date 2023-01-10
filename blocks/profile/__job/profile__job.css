@@ -1,0 +1,10 @@
+.profile__job {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+    max-width: 336px;
+    height: 18px;
+    margin: 0;
+    white-space: nowrap;
+}
