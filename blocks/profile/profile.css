@@ -4,8 +4,16 @@
     margin: 0 auto 30px;
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:940px) {
+    .profile{
+        max-width: calc(100vw - 30px * 2);
+    }
+}
+
+@media screen and (max-width:719px) {
     .profile{
         flex-direction: column;
+        margin-bottom: 36px;
+        max-width: calc(100vw - 19px * 2);
     }
 }

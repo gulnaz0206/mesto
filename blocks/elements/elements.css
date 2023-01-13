@@ -1,4 +1,4 @@
-.elements {
+ .elements {
     display: grid;
     width: 100%;
     max-width: 880px;
@@ -6,9 +6,3 @@
     gap: 17px;
     margin: 0 auto;
 }
-
-/* @media screen and (max-width:320px) {
-    .elements {
-
-    }
-} */
