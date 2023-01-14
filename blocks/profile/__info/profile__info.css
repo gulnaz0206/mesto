@@ -2,34 +2,22 @@
     display: grid;
     max-width: 336px;
     width: 100%;
-    min-height: 120px;
-    margin-left: 30px;
-    margin-right: 244px;
-    margin-top: 22px;
     grid-template-columns: 1fr 24px;
+    column-gap: 18px;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 840px) {
     .profile__info {
-        margin-right: 100px;
+        margin-bottom: 36px;
     }
 }
 
-@media screen and (max-width:719px) {
+@media screen and (max-width: 480px) {
     .profile__info {
-        max-width: 220px;
-        grid-template-columns: 189px 18px;
-        grid-template-rows: 26px 14px;
-        gap: 14px 10px;
-        margin: 26px auto 34px;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .profile__info {
-        margin-top: 26px;
-        margin-left: 46px;
-        margin-bottom: 34px;
+        grid-template-columns: 1fr 18px;
+        margin-left: 15px;
     }
 }

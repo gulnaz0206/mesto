@@ -5,14 +5,12 @@
     background-image: url(../../../images/plus.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-color: black;
+    background-color: transparent;
     border: 2px solid #fff;
     border-radius: 2px;
     cursor: pointer;
-    align-self: center;
-    margin-top: -28px;
-
-    padding: 0;
+    align-self: start;
+    margin-top: 37px;
 }
 
 .profile__button:hover {
@@ -22,7 +20,15 @@
 @media screen and (max-width:720px) {
     .profile__button { 
         background-size: 16px 16px;
-        margin-top: -62px;
-        max-width: calc(100vw - 19px * 2);
+        max-width: calc(100vw - 30px * 2);
+    }
+}
+
+@media screen and (max-width:320px) {
+    .profile__button { 
+        max-width: 282px;
+        align-self: center;
+        margin-top: 0;
+        margin-bottom: 36px;
     }
 }

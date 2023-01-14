@@ -2,21 +2,20 @@
     width: 100%;
     font-weight: 500;
     font-size: 42px;
+    font-style: normal;
     line-height: 48px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
     margin: 0;
-    margin-top: -20px;
+    padding: 0;
 }
 
-@media screen and (max-width:719px) {
+@media screen and (max-width:480px) {
     .profile__name {
         max-width: 189px;
         font-size: 27px;
         line-height: 33px;
         text-align: center;
-        margin: 0 auto;
-        margin-top: 10px;
     }
 }

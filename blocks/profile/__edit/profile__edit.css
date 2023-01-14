@@ -8,8 +8,7 @@
     cursor: pointer;
     border: 1px solid #fff;
     padding: 0;
-    margin: 0;
-    margin-top: -20px;
+    margin-top: 25px;
 }
 
 .profile__edit:hover {
@@ -21,6 +20,6 @@
         max-width: 18px;
         min-height: 18px;
         background-size: 7.5px 7.5px;
-        margin-top: 15px;
+        margin: 0;
     }
 }

@@ -15,6 +15,7 @@
 @import url(../blocks/profile/__job/profile__job.css);
 @import url(../blocks/profile/__edit/profile__edit.css);
 @import url(../blocks/profile/__button/profile__button.css);
+@import url(../blocks/profile/__section/profile__section.css);
 
 @import url(../blocks/elements/elements.css);
 
@@ -34,3 +35,4 @@
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/__input/popup__input.css);
 @import url(../blocks/popup/__submit-button/popup__submit-button.css);
+*{outline: 1px solid red;];
