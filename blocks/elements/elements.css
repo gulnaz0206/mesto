@@ -3,12 +3,14 @@
     width: 100%;
     max-width: 880px;
     grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+    justify-content: center;
+    margin: 0 auto;
     gap: 17px;
-    margin-top: 51px;
+    padding: 51px 0 67px;
 }
 
 @media screen and (max-width:320px) {
     .elements { 
-    margin-top: 36px;
+    padding: 36px 0 48px;
 }
 }
