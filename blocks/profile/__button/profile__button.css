@@ -1,4 +1,5 @@
 .profile__button {
+    display: flex;
     width: 100%;
     max-width: 150px;
     min-height: 50px;
@@ -6,29 +7,23 @@
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
+    background-size: 22px;
     border: 2px solid #fff;
     border-radius: 2px;
     cursor: pointer;
-    align-self: start;
-    margin-top: 37px;
+    align-self: center;
+    margin-left: auto;
 }
 
 .profile__button:hover {
     opacity: .6;
 }
 
-@media screen and (max-width:720px) {
-    .profile__button { 
-        background-size: 16px 16px;
-        max-width: calc(100vw - 30px * 2);
-    }
-}
-
-@media screen and (max-width:320px) {
+@media screen and (max-width:490px) {
     .profile__button { 
         max-width: 282px;
         align-self: center;
-        margin-top: 0;
-        margin-bottom: 36px;
+        background-size: 16px;
+        margin-left: 0;
     }
 }
