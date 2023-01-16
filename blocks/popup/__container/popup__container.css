@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     max-width: 430px;
-    min-height: 330px;
     background: #fff;
     border-radius: 10px;
     flex-direction: column;

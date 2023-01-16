@@ -1,7 +1,10 @@
 .element__image {
+    display: block;
+    width: 100%;
     max-width: 282px;
     max-height: 282px;
     margin: 0 auto;
     cursor: pointer;
     object-fit: cover;
+    object-position: center;
 }
