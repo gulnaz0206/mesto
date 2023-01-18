@@ -5,25 +5,16 @@
     color: black;
     border: none;
     width: 100%;
-    max-width: 430px;
+    max-width: 358px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 0 0 8px;
+    margin: 0 auto 25px;
+    /* height: 27px; */
+    box-sizing: border-box;
+    /* padding: 0 0 8px; */
 } 
 
-.popup__input:nth-child(2) {
-    margin-top: 17px;
-    margin-bottom: 48px;
-}
-
-@media screen and (max-width:720px) {
+ @media screen and (max-width:720px) {
     .popup__input {
-        padding: 0 0 9px;
-    }
-}
-
-@media screen and (max-width:720px) {
-    .popup__input:nth-child(2) {
-        margin-top: 0;
-        margin-bottom: 45px;
+        margin-bottom: 20px;
     }
 }
