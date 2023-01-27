@@ -20,7 +20,7 @@
 }
 
 @media screen and (max-width:720px) {
-    .popup__screate-button {
+    .popup__create-button {
         min-width: 238px;
         min-height: 46px;
         font-size: 14px;
