@@ -2,7 +2,7 @@ import initialCards from './data.js';
 
 const cardsContainer = document.querySelector('.elements');//секция карточек
 
-const popupProfile = document.querySelector('.popup-edit-profile');//попап редактирования
+const popupProfile = document.querySelector('.popup_type_profile');//попап редактирования
 const popupOpenButtonElement = document.querySelector('.profile__edit');//кнопка открытия попапа ручка
 const popupCloseButtonElement = popupProfile.querySelector('.popup__close-button');//кнопка закрытия попапа редактирования
 const popupProfileForm = popupProfile.querySelector('.popup-edit-form');//форма попапа редактирования профиля
@@ -13,7 +13,7 @@ const profileJob = document.querySelector('.profile__job');//строка вид
 const popupSubmitButton = popupProfile.querySelector('.popup__submit-button');//кнопка сохранения данных профиля
 
 //Попап добавления новой карточки
-const popupAddCard = document.querySelector('.popup-create-card');//попап добавления карточки
+const popupAddCard = document.querySelector('.popup_type_add-card');//попап добавления карточки
 const popupOpenAddCardElement = document.querySelector('.profile__button');//кнопка открытия попапа плюс
 const popupPlaceName = popupAddCard.querySelector('.popup__input_type_place');//инпут места в попапе
 const popupPlaceLink = popupAddCard.querySelector('.popup__input_type_link');//инпут ссылки в попапе
@@ -22,7 +22,7 @@ const popupCloseCardElement = popupAddCard.querySelector('.popup__close-button')
 const popupAddCardForm = popupAddCard.querySelector('.popup-add-form');//форма попапа добавления карточки
 
 
-const popupBig = document.querySelector('.popup-big-picture');//попап большой картинки карточки места
+const popupBig = document.querySelector('.popup_type_big-picture');//попап большой картинки карточки места
 const popupImageBig = popupBig.querySelector('.popup__image');//большая картинка карточки места
 const popupHeadingBig = popupBig.querySelector('.popup-image-heading');//название большой карточки места
 const popupBigImageCloseButton = popupBig.querySelector('.popup__close-button'); //кнопка закрытия 
