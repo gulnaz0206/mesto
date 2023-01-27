@@ -2,10 +2,10 @@ import initialCards from './data.js';
 
 const cardsContainer = document.querySelector('.elements');//секция карточек
 
-const popupProfile = document.querySelector('.popup__edit_profile');//попап редактирования
+const popupProfile = document.querySelector('.popup-edit-profile');//попап редактирования
 const popupOpenButtonElement = document.querySelector('.profile__edit');//кнопка открытия попапа ручка
 const popupCloseButtonElement = popupProfile.querySelector('.popup__close-button');//кнопка закрытия попапа редактирования
-const popupProfileForm = popupProfile.querySelector('.popup__edit_form');//форма попапа редактирования профиля
+const popupProfileForm = popupProfile.querySelector('.popup-edit-form');//форма попапа редактирования профиля
 const popupInputName = popupProfileForm.querySelector('.popup__input_type_name');//инпут имя в попапе
 const popupInputJob = popupProfileForm.querySelector('.popup__input_type_job');//инпут вид деятельности в попапе
 const profileName = document.querySelector('.profile__name');//строка имя в секции профиль
@@ -13,18 +13,18 @@ const profileJob = document.querySelector('.profile__job');//строка вид
 const popupSubmitButton = popupProfile.querySelector('.popup__submit-button');//кнопка сохранения данных профиля
 
 //Попап добавления новой карточки
-const popupAddCard = document.querySelector('.popup__create_card');//попап добавления карточки
+const popupAddCard = document.querySelector('.popup-create-card');//попап добавления карточки
 const popupOpenAddCardElement = document.querySelector('.profile__button');//кнопка открытия попапа плюс
 const popupPlaceName = popupAddCard.querySelector('.popup__input_type_place');//инпут места в попапе
 const popupPlaceLink = popupAddCard.querySelector('.popup__input_type_link');//инпут ссылки в попапе
 const popupCreateButton = popupAddCard.querySelector('.popup__create-button');//кнопка сохранения добавления новых кароточек
 const popupCloseCardElement = popupAddCard.querySelector('.popup__close-button');//кнопка закрытия попапа добавления
-const popupAddCardForm = popupAddCard.querySelector('.popup__add_form');//форма попапа добавления карточки
+const popupAddCardForm = popupAddCard.querySelector('.popup-add-form');//форма попапа добавления карточки
 
 
-const popupBig = document.querySelector('.popup__big_picture');//попап большой картинки карточки места
+const popupBig = document.querySelector('.popup-big-picture');//попап большой картинки карточки места
 const popupImageBig = popupBig.querySelector('.popup__image');//большая картинка карточки места
-const popupHeadingBig = popupBig.querySelector('.popup__image_heading');//название большой карточки места
+const popupHeadingBig = popupBig.querySelector('.popup-image-heading');//название большой карточки места
 const popupBigImageCloseButton = popupBig.querySelector('.popup__close-button'); //кнопка закрытия 
 
 const cardTemplate = document.querySelector('.card__template').content.querySelector('.element');//темплейт
