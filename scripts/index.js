@@ -19,18 +19,15 @@ const popupPlaceName = popupAddCard.querySelector('.popup__input_type_place');//
 const popupPlaceLink = popupAddCard.querySelector('.popup__input_type_link');//инпут ссылки в попапе
 const popupCreateButton = popupAddCard.querySelector('.popup__create-button');//кнопка сохранения добавления новых кароточек
 const popupCloseCardElement = popupAddCard.querySelector('.popup__close-button');//кнопка закрытия попапа добавления
-const popupAddCardForm = popupAddCard.querySelector('#add-form');//форма попапа добавления карточки
-
-//const sectionGallery = document.querySelector('.elements');//секция карточек
+const popupAddCardForm = popupAddCard.querySelector('.popup__add_form');//форма попапа добавления карточки
 
 
-const popupBig = document.querySelector('#popup-big-picture');//попап большой картинки карточки места
-const popupImageBig = document.querySelector('.popup__image');//большая картинка карточки места
-const popupHeadingBig = document.querySelector('.popup__image_heading');//название большой карточки места
-const popupBigImageCloseButton = document.querySelector('.popup__close'); //кнопка закрытия 
+const popupBig = document.querySelector('.popup__big_picture');//попап большой картинки карточки места
+const popupImageBig = popupBig.querySelector('.popup__image');//большая картинка карточки места
+const popupHeadingBig = popupBig.querySelector('.popup__image_heading');//название большой карточки места
+const popupBigImageCloseButton = popupBig.querySelector('.popup__close-button'); //кнопка закрытия 
 
-//const cardTemplate = document.querySelector('#card__template').content.querySelector('.element');//темплейт?
-// const cardGallery = document.querySelector('.elements');
+const cardTemplate = document.querySelector('.card__template').content.querySelector('.element');//темплейт
 
 const handleDeleteCard = (event) => {
     event.target.closest('.element').remove();
@@ -39,25 +36,28 @@ const handleLikeCard = (event) => {
     event.target.closest('.element__like').classList.toggle('element__like_active');
 }
 
-function createCard(card) {
+const createCard = (card) => {
     const cardElement = cardTemplate.cloneNode(true);
 
-    const cardPicture = cardElement.querySelector('.celement__image');
+    const cardPicture = cardElement.querySelector('.element__image');
     const cardTitle = cardElement.querySelector('.element__caption');
     cardPicture.src = card.link;
     cardPicture.alt = card.name;
     cardTitle.textContent = card.name;
-    const deleteButtonElement = cardElement.querySelector('.card__delete-button');
+
+    const deleteButtonElement = cardElement.querySelector('.element__delete-button');
     deleteButtonElement.addEventListener('click', handleDeleteCard);
 
-    const likeButtonElement = cardElement.querySelector('.card__like-button');
+    const likeButtonElement = cardElement.querySelector('.element__like');
     likeButtonElement.addEventListener('click', handleLikeCard);
 
     cardPicture.addEventListener('click', () => {
         popupImageBig.src = card.link;
         popupImageBig.alt = card.name;
         popupHeadingBig.textContent = card.name;
+        openPopup(popupBig);
     })
+
     return cardElement;
 }
 
@@ -79,7 +79,6 @@ popupOpenAddCardElement.addEventListener('click', function () {
     openPopup(popupAddCard);
 });
 
-
 const closePopup = function (popup) {
     popup.classList.remove('popup_opened');
 }
@@ -90,13 +89,16 @@ const closePopupOverlayClick = (event) => {
     }
 }
 
-
 popupCloseButtonElement.addEventListener('click', function () {
     closePopup(popupProfile)
 });
 popupCloseCardElement.addEventListener('click', function () {
     closePopup(popupAddCard)
 });
+
+popupBigImageCloseButton.addEventListener('click', function () {
+    closePopup(popupBig);
+})
 
 function submitProfileInfo(event) {
     event.preventDefault();
@@ -135,22 +137,3 @@ popupAddCard.addEventListener('click', closePopupOverlayClick);
 popupBig.addEventListener('click', closePopupOverlayClick);
 
 popupAddCardForm.addEventListener('submit', submitFormCard);
-
-
-// const togglePopup = function (popup) {
-//     popup.classList.toggle('popup_opened')
-// }
-
-// popupOpenButtonElement.addEventListener('click', function () {
-//     togglePopup(popupProfile)
-// });
-// popupOpenAddCardElement.addEventListener('click', function () {
-//     togglePopup(popupAddCard)
-// });
-// popupCloseButtonElement.addEventListener('click', function () {
-//     togglePopup(popupProfile)
-// });
-// popupCloseCardElement.addEventListener('click', function () {
-//     togglePopup(popupAddCard)
-// });
-
