@@ -1,4 +1,4 @@
-.popup__create-button {
+.popup__button {
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
@@ -15,12 +15,12 @@
     margin-top: 20px;
 }
 
-.popup__create-button:hover {
+.popup__button:hover {
     opacity: .8;
 }
 
 @media screen and (max-width:720px) {
-    .popup__create-button {
+    .popup__button {
         min-width: 238px;
         min-height: 46px;
         font-size: 14px;

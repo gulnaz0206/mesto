@@ -8,10 +8,13 @@
     max-width: 358px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     margin: 0 auto 25px;
-    /* height: 27px; */
     box-sizing: border-box;
-    /* padding: 0 0 8px; */
-} 
+}
+
+.popup__input_type_error {
+    border-bottom: 1px solid red;
+    margin-bottom: 5px;
+}
 
  @media screen and (max-width:720px) {
     .popup__input {
