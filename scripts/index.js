@@ -70,32 +70,47 @@ initialCards.forEach((item) => {
     renderInitalCards(item);
 })
 
+const popups = document.querySelectorAll('.popup')
+
+popups.forEach((popup) => {
+    popup.addEventListener('mousedown', (evt) => {
+        if (evt.target.classList.contains('popup_opened')) {
+            closePopup(popup)
+        }
+        if (evt.target.classList.contains('popup__close-button')) {
+          closePopup(popup)
+        }
+    })
+})
+
 
 popupOpenButtonElement.addEventListener('click', function () {
-    openPopup(popupProfile)
+    openPopup(popupProfile);
+    profileName.value= popupInputName.textContent ;
+    profileJob.value = popupInputJob.textContent;
 });
 
-popupOpenAddCardElement.addEventListener('click', function () {
-    openPopup(popupAddCard);
-});
+// popupOpenAddCardElement.addEventListener('click', function () {
+//     openPopup(popupAddCard);
+// });
 
 
-const closePopupOverlayClick = (event) => {
-    if (!event.target.closest('.popup__container')) {
-        closePopup(event.target)
-    }
-}
+// const closePopupOverlayClick = (event) => {
+//     if (!event.target.closest('.popup__container')) {
+//         closePopup(event.target)
+//     }
+// }
 
-popupCloseButtonElement.addEventListener('click', function () {
-    closePopup(popupProfile)
-});
-popupCloseCardElement.addEventListener('click', function () {
-    closePopup(popupAddCard)
-});
+// popupCloseButtonElement.addEventListener('click', function () {
+//     closePopup(popupProfile)
+// });
+// popupCloseCardElement.addEventListener('click', function () {
+//     closePopup(popupAddCard)
+// });
 
-popupBigImageCloseButton.addEventListener('click', function () {
-    closePopup(popupBig);
-})
+// popupBigImageCloseButton.addEventListener('click', function () {
+//     closePopup(popupBig);
+// })
 
 function submitProfileInfo(event) {
     event.preventDefault();
@@ -121,18 +136,14 @@ popupOpenButtonElement.addEventListener('click', function () {
     popupInputJob.value = profileJob.textContent;
 });
 
-popupCloseButtonElement.addEventListener('click', function () {
-    closePopup(popupProfile)
-});
+// popupCloseButtonElement.addEventListener('click', function () {
+//     closePopup(popupProfile)
+// });
 popupProfileForm.addEventListener('submit', submitProfileInfo);
 
-popupBigImageCloseButton.addEventListener('click', function () {
-    closePopup(popupBig)
-});
-
-popupProfile.addEventListener('click', closePopupOverlayClick);
-popupAddCard.addEventListener('click', closePopupOverlayClick);
-popupBig.addEventListener('click', closePopupOverlayClick);
+// popupProfile.addEventListener('click', closePopupOverlayClick);
+// popupAddCard.addEventListener('click', closePopupOverlayClick);
+// popupBig.addEventListener('click', closePopupOverlayClick);
 
 popupAddCardForm.addEventListener('submit', submitFormCard);
 
