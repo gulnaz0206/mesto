@@ -39,10 +39,10 @@
             <form name="edit-form" class="popup-edit-form popup__form" novalidate>
                 <input type="text" name="popup__name" placeholder="Ваше имя" minlength="2" maxlength="40" required
                     class="popup__input popup__input_type_name" id="input-edit-name">
-                    <span id="input-edit-name-error" class="popup__error"></span>
+                <span id="input-edit-name-error" class="popup__error"></span>
                 <input type="text" name="popup__job" placeholder="Ваша профессия" minlength="2" maxlength="200" required
-                    class="popup__input popup__input_type_job" id="input-edit-job" >
-                    <span id="input-edit-job-error" class="popup__error"></span>
+                    class="popup__input popup__input_type_job" id="input-edit-job">
+                <span id="input-edit-job-error" class="popup__error"></span>
                 <button type="submit" class="popup__submit-button popup__button">Сохранить</button>
             </form>
         </div>
@@ -53,13 +53,13 @@
             <button type="button" aria-label="Кнопка закрыть попап" class="popup__close-button"></button>
             <h3 class="popup__title">Новое место</h3>
             <form name="add-form" class="popup__form popup-add-form" novalidate>
-                <input type="text" name="popup__name" placeholder="Название" minlength="2" maxlength="30" required
-                    class="popup__input popup__input_type_place" id="input-add-place">
-                    <span id="input-add-place-error" class="popup__error"></span>
-                <input type="url" name="popup__job" placeholder="Ссылка на картинку"
-                    class="popup__input popup__input_type_link" id="input-edit-url" required>
-                    <span id="input-edit-url-error" class="popup__error"></span><!--popup__error_visible--->
-                <button type="submit" class="popup__create-button popup__button">Создать</button>
+                <input type="text" name="popup__input_type_place" placeholder="Название" minlength="2" maxlength="30"
+                    required class="popup__input popup__input_type_place" id="input-add-place">
+                <span id="input-add-place-error" class="popup__error"></span>
+                <input type="url" name="popup__link" placeholder="Ссылка на картинку"
+                    class="popup__input popup__input_type_link" id="input-edit-link" required>
+                <span id="input-edit-link-error" class="popup__error"></span><!--popup__error_visible--->
+                <button type="submit" class="popup__button popup__create-button">Создать</button>
             </form>
         </div>
     </div>
@@ -69,6 +69,31 @@
             <button type="button" aria-label="Кнопка закрыть попап" class="popup__close-button"></button>
             <img class="popup__image" alt=" ">
             <figcaption class="popup-image-heading"></figcaption>
+        </div>
+    </div>
+
+    <!--Попап удаления картинки-->
+    <div class="popup popup_type_delete-picture">
+        <div class="popup__container">
+            <!-- <form class="popup__form popup-delete-form"> -->
+                <button type="button" aria-label="Кнопка закрыть попап" class="popup__close-button"></button>
+                <h3 class="popup__title">Вы уверены?</h3>
+                <button type="submit" class="popup__button popup__delete-button">Да</button>
+            <!-- </form> -->
+        </div>
+    </div>
+
+    <!--Попап смены аватара-->
+    <div class="popup popup_type_change-avatar">
+        <div class="popup__container">
+            <!-- <form class="popup__form popup-change-avatar-form"> -->
+                <button type="button" aria-label="Кнопка закрыть попап" class="popup__close-button"></button>
+                <h3 class="popup__title">Обновить аватар</h3>
+                <input type="url" name="popup__link" placeholder="Ссылка на картинку"
+                    class="popup__input popup__input_type_avatar" id="input-change-avatar" required>
+                <span id="input-change-avatar-error" class="popup__error"></span>
+                <button type="submit" class="popup__button popup__delete-button">Сохранить</button>
+            <!-- </form> -->
         </div>
     </div>
 
@@ -84,7 +109,8 @@
         </article>
     </template>
 
-    <script src="./scripts/validation.js"></script>
+    <script type="module" src="./scripts/Card.js"></script>
+    <script type="module" src="./scripts/FormValidator.js"></script>
     <script type="module" src="./scripts/index.js"></script>
 
 </body>

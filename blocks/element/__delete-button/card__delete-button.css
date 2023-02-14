@@ -11,6 +11,6 @@
     background-color: transparent;
 }
 
-.card__delete-button:hover {
+.element__delete-button:hover {
     opacity: .5;
 }
