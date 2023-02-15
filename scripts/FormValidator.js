@@ -21,7 +21,7 @@ _hideInvalidInput = () => {
     })
 };
 
-_resetValidation = () => {
+resetValidation = () => {
     this._toggleButtonState()
     this._inputList.forEach((input) => {
         this._coverInputError(input);
